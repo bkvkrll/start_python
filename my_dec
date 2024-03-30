@@ -1,0 +1,12 @@
+def my_decorator(func):
+  def wrapper(*args, **kwargs):
+    print("Декоратор перед функцией")
+    func(*args, **kwargs)
+    print("Декоратор после функции")
+  return wrapper
+
+@my_decorator
+def my_function():
+  print("Функция")
+
+my_function()
